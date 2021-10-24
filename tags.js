@@ -1,6 +1,3 @@
-// This ignores the validity of the tags, and instead just checks the format. It will accept any tag value, whether or not
-// it is actually a valid HTML tag. To make this program even more useful, an additional feature would be to
-// check that the given tag value is actually a valid HTML tag.
 let leadingTag, endingTag = false;
 function checkTags (text) {
     // Using an array as a stack to store identified tag values
@@ -19,7 +16,6 @@ function checkTags (text) {
             tagText = getTagText(i, textArray);
             textLength = tagText.length;
             i += textLength;
-            //lastTag = tags.splice(-1,1);
             lastTag = tags.pop();
             if (tagText === lastTag) {
                 results += "Correctly tagged paragraph.";
@@ -58,8 +54,7 @@ function checkTags (text) {
     }
     // Missing a closing tag at the end of the paragraph.
     while (tags.length > 0 && i == textArray.length){
-        remainingTag = tags.pop();
-        results += `Expected ${remainingTag} Found #.`;
+        results += `Expected ${tags.pop()} Found #.`;
     }
     return results;
 }
@@ -77,5 +72,3 @@ function getTagText (i, textArray) {
     return tagText;
 }
 module.exports = checkTags;
-//var rslts = checkTags(text);
-//console.log(rslts);
