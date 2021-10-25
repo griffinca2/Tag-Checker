@@ -30,7 +30,6 @@ function checkTags (text) {
                 }
             }
             endingTag = false;
-            //tagText = "";
         }
         else {
             if (textArray[i] === '<'){

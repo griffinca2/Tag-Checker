@@ -40,7 +40,17 @@ test('Invalid tags, extra tags, special characters.', () => {
     .toBe("Correctly tagged paragraph.Expected * Found B.Expected d Found #.Expected \\6 Found #.Expected \\g Found #.Expected B Found #.");
 });
 
-test('Extra tags, special characters.', () => {
+test('Extra tag symbols.', () => {
     expect(checkTags('<<<<<A><B><</B>>>>></A>'))
+    .toBe("Correctly tagged paragraph.Correctly tagged paragraph.");
+});
+
+test('Special characters.', () => {
+    expect(checkTags('<#><@></@></#>'))
+    .toBe("Correctly tagged paragraph.Correctly tagged paragraph.");
+});
+
+test('Tag values > 1.', () => {
+    expect(checkTags('<ABCD><EFGH></EFGH></ABCD>'))
     .toBe("Correctly tagged paragraph.Correctly tagged paragraph.");
 });
