@@ -1,14 +1,3 @@
-//let text = '<A></A><B></B>'
-//let text = '<A><B><C></C></B></A>'
-//let text = '<A><B><C></A></B></C>'
-//let text = 'The following text<C><B>is centerd and in boldface</B></C>'
-//let text = '<B>This <\\g>is <B>boldface</B> in <<*> a</B> <\\6> <<d>sentence'
-//let text = '<B><C> This should be centred and in boldface, but the tags are wrongly nested </B></C>'
-//let text = '<B>This should be in boldface, but there is an extra closing tag</B></C'
-//let text = '<B><C>This should be centred and in boldface, but there is a missing closing tag</C>'
-//let text = '<A><B><C></C></B>'
-//let text = '<<<<<A><B><</B></A>>>>'
-
 const checkTags = require('../tags.js');
 
  test('All tags are correct.', () => {
