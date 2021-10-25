@@ -10,7 +10,6 @@ function checkTags (text) {
             tagText = getTagText(i, textArray);
             tags[tags.length] = tagText;
             leadingTag = false;
-            tagText = "";
         }
         else if(endingTag){
             tagText = getTagText(i, textArray);
